@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<PackageId>Winter</PackageId>
+		<TargetFrameworks>netstandard2.1;net60</TargetFrameworks>
+		<Authors>Stan Drapkin</Authors>
+		<Company>https://SecurityDriven.net</Company>
+		<Copyright>Copyright © $([System.DateTime]::UtcNow.ToString(yyyy)) Stan Drapkin</Copyright>
+		<RepositoryUrl>https://github.com/sdrapkin/SecurityDriven.Winter</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<Version>0.0.1</Version>
+		<SignAssembly>false</SignAssembly>
+		<AssemblyOriginatorKeyFile>Inferno.snk</AssemblyOriginatorKeyFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIconUrl>https://avatars.githubusercontent.com/u/9137858?s=128</PackageIconUrl>
+		<PackageReleaseNotes>[placeholder]</PackageReleaseNotes>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Description>[placeholder]</Description>
+		<PackageTags>Winter</PackageTags>
+		<PackageProjectUrl>https://github.com/sdrapkin/SecurityDriven.Winter</PackageProjectUrl>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>SecurityDriven.Winter.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="*.xml" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Remove="LICENSE.md" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+
+</Project>
